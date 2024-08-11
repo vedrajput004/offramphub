@@ -4,12 +4,26 @@
 
 @layer base {
     body {
-        @apply bg-black;
+        @apply bg-black text-white;
+    }
+
+    h1 {
+        font-size: clamp(28px, 5vw, 58px);
+    }
+
+    h2 {
+        font-size: clamp(22px, 5vw, 32px);
+    }
+}
+
+@layer components {
+    .header-main {
+        @apply fixed top-20 left-0 w-full;
     }
 }
 
 @layer utilities {
     .container-fluid {
-        @apply px-110;
+        padding: 0 clamp(20px, 8vw, 110px);
     }
 }
