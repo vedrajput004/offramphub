@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         @apply bg-black text-white font-dmSans;
     }
@@ -23,12 +27,13 @@
         line-height: clamp(22px, 5vw, 31px);
     }
 
-    a {
-        @apply  transition-all duration-300;
-    }
-    a:hover {
+    /* a {
         @apply transition-all duration-300;
-    }
+    } */
+
+    /* a:hover {
+        @apply transition-all duration-300;
+    } */
 
     ul li {
         @apply text-[12px] leading-[15px];
@@ -73,9 +78,52 @@
 
     /* btn End  */
 
+    /* Common Start  */
+    .img {
+        @apply relative overflow-hidden;
+    }
+
+    .img img {
+        @apply absolute top-0 left-0 h-full w-full object-cover object-center;
+    }
+
+    .pre-heading span {
+        font-size: clamp(12px, 5vw, 20px);
+        @apply font-normal block;
+    }
+
+    .white * {
+        @apply text-white;
+    }
+
+    .title span {
+        @apply text-lightBlue;
+    }
+
+    .content p {
+        @apply text-16 text-nobel;
+    }
+
+    .content-border {
+        background: rgb(122, 202, 241);
+        background: linear-gradient(90deg, rgba(122, 202, 241, 1) 40%, rgba(0, 0, 0, 0) 100%);
+        border-radius: 20px 80px 80px 20px;
+    }
+
+    @screen mdscreen2 {
+        .content-border {
+            background: rgb(122, 202, 241);
+            background: linear-gradient(180deg, rgba(122, 202, 241, 1) 40%, rgba(0, 0, 0, 0) 100%);
+            border-radius: 20px;
+        }
+    }
+
+
+    /* Common End  */
+
     /* Header Start  */
     .header-main {
-        @apply fixed top-0 left-0 w-full;
+        @apply fixed top-0 left-0 w-full z-[99999];
     }
 
     .header-main .nav-menu {
@@ -108,40 +156,38 @@
     }
 
     .nav-bar-icon span {
-        @apply h-[1px] w-10 bg-black block;
+        @apply h-[1px] w-20 bg-black block;
+    }
+
+    .nav-bar-icon span:last-of-type {
+        @apply w-10 relative ml-auto;
+    }
+
+    .mobile-nav-link {
+        @apply text-black;
     }
 
     /* Header End  */
-    /* footer */
-    .footer-copy .footer-left ul li {
-        @apply px-[12px] relative;
+
+    /* Intro Section Start  */
+    .intro .img {
+        @apply rounded-[16px];
     }
 
-    .footer-copy .footer-left ul li:first-child::after {
-        @apply hidden;
+    .intro .content-wrapper {
+        border-radius: 20px 80px 80px 20px;
     }
 
-    .footer-copy .footer-left ul li::after {
-        @apply content-[''] absolute bg-Nobel top-[4px] left-0 h-[12px] w-[1px];
+    @screen mdscreen2 {
+        .intro .content-wrapper {
+            border-radius: 20px;
+        }
     }
 
-    .footer-copy .content * {
-        @apply text-[12px] leading-[15px];
-    }
-
-    .footer-right ul li a:hover {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%) hue-rotate(63deg) brightness(101%) contrast(101%);
-        -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%) hue-rotate(63deg) brightness(101%) contrast(101%);
-    }
-
-    .footer-contact ul li a:hover svg path {
-        fill: lightBlue;
-    }
-    /* footer */
-
-    /* sub heading */
+    /* Intro Section End  */
+    /* / sub heading / */
     .sub-heading {
-        @apply  w-full inline-flex items-center justify-center;
+        @apply w-full inline-flex items-center justify-center;
     }
 
     .sub-heading * {
@@ -151,7 +197,8 @@
     .title span {
         @apply text-lightBlue;
     }
-    /* sub heading */
+
+    /* / sub heading / */
 
     .img img {
         @apply absolute inset-0 w-full h-full object-cover rounded-[8px]
@@ -161,7 +208,7 @@
         @apply pt-[118.79%] relative;
     }
 
-    /* team start */
+    /* / team start / */
     .hover-detail {
         @apply absolute inset-0
     }
@@ -181,7 +228,36 @@
     .team-block-main .content * {
         @apply text-[16px] leading-[20px] font-normal;
     }
-    /* team end */
+
+    /* / team end / */
+
+    /* / footer / */
+    .footer-copy .footer-left ul li {
+        @apply px-[12px] relative;
+    }
+
+    .footer-copy .footer-left ul li:first-child::after {
+        @apply hidden;
+    }
+
+    .footer-copy .footer-left ul li::after {
+        @apply content-[''] absolute bg-nobel top-[4px] left-0 h-[12px] w-[1px];
+    }
+
+    .footer-copy .content * {
+        @apply text-[12px] leading-[15px];
+    }
+
+    .footer-right ul li a:hover {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%) hue-rotate(63deg) brightness(101%) contrast(101%);
+        -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%) hue-rotate(63deg) brightness(101%) contrast(101%);
+    }
+
+    .footer-contact ul li a:hover svg path {
+        fill: lightBlue;
+    }
+
+    /* / footer / */
 }
 
 @layer utilities {
