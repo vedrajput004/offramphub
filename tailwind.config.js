@@ -8,6 +8,7 @@ module.exports = {
         woodSmoke: "#0B0C14",
         cinder: "#151515",
         balticSea: "#262626",
+        Nobel: "#B3B3B3",
       },
       fontFamily: {
         dmSans: ["DM Sans", "sans-serif"]
@@ -135,6 +136,9 @@ module.exports = {
         "mdscreen": { "max": "767px" },
         "mdscreen2": { "max": "991px" },
         "md2": { "min": "992px" },
+        desktop: { max: '1439px' },
+        lgscreen: { max: '1023px' },
+        mdscreen: { max: '767px' },
       }
     },
   },
