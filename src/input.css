@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply bg-black text-white;
+        @apply bg-black text-white font-dmSans;
     }
 
     h1 {
@@ -17,13 +17,94 @@
 }
 
 @layer components {
-    .header-main {
-        @apply fixed top-20 left-0 w-full;
+
+    /* btn Start  */
+    .btn {
+        @apply py-5 px-15 text-12 rounded-100 relative overflow-hidden flex transition-common z-10;
     }
+
+    .btn span {
+        @apply absolute block w-0 h-0 rounded-[50%] transition-all duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 -z-[1];
+    }
+
+    .btn img {
+        @apply transition-all duration-500 ease-in-out;
+    }
+
+    .btn:hover span {
+        @apply w-[225%] h-[562.5px];
+    }
+
+    .btn-skyBlue {
+        @apply text-white bg-transparent hover:text-black;
+    }
+
+    .btn-skyBlue span {
+        @apply bg-lightBlue;
+    }
+
+    .btn-skyBlue:hover img {
+        @apply filter-black;
+    }
+
+    /* Active Btn start  */
+    .btn-active-skyBlue {
+        @apply bg-lightBlue text-black;
+    }
+
+    /* btn End  */
+
+    /* Header Start  */
+    .header-main {
+        @apply fixed top-0 left-0 w-full;
+    }
+
+    .header-main .nav-menu {
+        @apply flex items-center gap-[18px] xlscreen:gap-10;
+    }
+
+    .hoverable a {
+        @apply flex items-center gap-10;
+    }
+
+    .header-right .btn-group {
+        @apply flex flex-wrap items-center gap-10 lgscreen:hidden;
+    }
+
+    .header-main .header-center .nav-menu li.active a,
+    .header-main .header-right li.active a {
+        @apply btn-active-skyBlue;
+    }
+
+    .header-main .header-logo {
+        @apply xlscreen:w-[145px];
+    }
+
+    .header-main .header-center {
+        @apply lgscreen:hidden;
+    }
+
+    .nav-bar-icon {
+        @apply bg-lightBlue py-10 px-[14px] flex-col gap-y-[3px] rounded-100 hidden lgscreen:flex;
+    }
+
+    .nav-bar-icon span {
+        @apply h-[1px] w-10 bg-black block;
+    }
+
+    /* Header End  */
 }
 
 @layer utilities {
     .container-fluid {
         padding: 0 clamp(20px, 8vw, 110px);
+    }
+
+    .transition-common {
+        @apply transition-all duration-300;
+    }
+
+    .filter-black {
+        filter: brightness(0) saturate(100%)
     }
 }

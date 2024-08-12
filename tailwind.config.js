@@ -9,6 +9,20 @@ module.exports = {
         cinder: "#151515",
         balticSea: "#262626",
       },
+      fontFamily: {
+        dmSans: ["DM Sans", "sans-serif"]
+      },
+      fontSize: {
+        12: "12px",
+        13: "13px",
+        14: "14px",
+        15: "15px",
+        16: "16px",
+        17: "17px",
+        18: "18px",
+        19: "19px",
+        20: "20px",
+      },
       padding: {
         0: "0px",
         5: "5px",
@@ -108,6 +122,19 @@ module.exports = {
         140: "140px",
         145: "145px",
         150: "150px"
+      },
+      borderRadius: {
+        100: "100px"
+      },
+      screens: {
+        "xlscreen": { "max": "1199px" },
+        "lgscreen": { "max": "1024px" },
+        "xlscreen2": { "max": "1279px" },
+        "smscreen": { "max": "639px" },
+        "smscreen2": { "max": "575px" },
+        "mdscreen": { "max": "767px" },
+        "mdscreen2": { "max": "991px" },
+        "md2": { "min": "992px" },
       }
     },
   },
