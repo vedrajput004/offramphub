@@ -3,273 +3,299 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        scroll-behavior: smooth;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
 
-    body {
-        @apply bg-black text-white font-dmSans;
-    }
+  body {
+    @apply bg-black text-white font-dmSans;
+  }
 
-    h1 {
-        font-size: clamp(28px, 5vw, 58px);
-    }
+  h1 {
+    font-size: clamp(28px, 5vw, 58px);
+  }
 
-    h2 {
-        @apply font-bold;
-        font-size: clamp(22px, 5vw, 32px);
-        line-height: clamp(24px, 5vw, 41px);
-    }
+  h2 {
+    @apply font-bold;
+    font-size: clamp(22px, 5vw, 32px);
+    line-height: clamp(24px, 5vw, 41px);
+  }
 
-    h3 {
-        @apply font-semibold;
-        font-size: clamp(18px, 5vw, 24px);
-        line-height: clamp(22px, 5vw, 31px);
-    }
+  h3 {
+    @apply font-semibold;
+    font-size: clamp(18px, 5vw, 24px);
+    line-height: clamp(22px, 5vw, 31px);
+  }
 
-    /* a {
+  /* a {
         @apply transition-all duration-300;
     } */
 
-    /* a:hover {
+  /* a:hover {
         @apply transition-all duration-300;
     } */
 
-    ul li {
-        @apply text-[12px] leading-[15px];
-    }
+  ul li {
+    @apply text-[12px] leading-[15px];
+  }
 }
 
 @layer components {
+  /* btn Start  */
+  .btn {
+    @apply py-5 px-15 text-12 rounded-100 relative overflow-hidden flex transition-common z-10;
+  }
 
-    /* btn Start  */
-    .btn {
-        @apply py-5 px-15 text-12 rounded-100 relative overflow-hidden flex transition-common z-10;
-    }
+  .btn span {
+    @apply absolute block w-0 h-0 rounded-[50%] transition-all duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 -z-[1];
+  }
 
-    .btn span {
-        @apply absolute block w-0 h-0 rounded-[50%] transition-all duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 -z-[1];
-    }
+  .btn img {
+    @apply transition-all duration-500 ease-in-out;
+  }
 
-    .btn img {
-        @apply transition-all duration-500 ease-in-out;
-    }
+  .btn:hover span {
+    @apply w-[225%] h-[562.5px];
+  }
 
-    .btn:hover span {
-        @apply w-[225%] h-[562.5px];
-    }
+  .btn-skyBlue {
+    @apply text-white bg-transparent hover:text-black;
+  }
 
-    .btn-skyBlue {
-        @apply text-white bg-transparent hover:text-black;
-    }
+  .btn-skyBlue span {
+    @apply bg-lightBlue;
+  }
 
-    .btn-skyBlue span {
-        @apply bg-lightBlue;
-    }
+  .btn-skyBlue:hover img {
+    @apply filter-black;
+  }
 
-    .btn-skyBlue:hover img {
-        @apply filter-black;
-    }
+  /* Active Btn start  */
+  .btn-active-skyBlue {
+    @apply bg-lightBlue text-black;
+  }
 
-    /* Active Btn start  */
-    .btn-active-skyBlue {
-        @apply bg-lightBlue text-black;
-    }
+  /* btn End  */
 
-    /* btn End  */
+  /* Common Start  */
+  .img {
+    @apply relative overflow-hidden;
+  }
 
-    /* Common Start  */
-    .img {
-        @apply relative overflow-hidden;
-    }
+  .img img {
+    @apply absolute top-0 left-0 h-full w-full object-cover object-center;
+  }
 
-    .img img {
-        @apply absolute top-0 left-0 h-full w-full object-cover object-center;
-    }
+  .pre-heading span {
+    font-size: clamp(12px, 5vw, 20px);
+    @apply font-normal block;
+  }
 
-    .pre-heading span {
-        font-size: clamp(12px, 5vw, 20px);
-        @apply font-normal block;
-    }
+  .white * {
+    @apply text-white;
+  }
 
-    .white * {
-        @apply text-white;
-    }
+  .title span {
+    @apply text-lightBlue;
+  }
 
-    .title span {
-        @apply text-lightBlue;
-    }
+  .content p {
+    @apply text-16 text-nobel;
+  }
 
-    .content p {
-        @apply text-16 text-nobel;
-    }
+  .content-border {
+    background: rgb(122, 202, 241);
+    background: linear-gradient(
+      90deg,
+      rgba(122, 202, 241, 1) 40%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    border-radius: 20px 80px 80px 20px;
+  }
 
+  @screen mdscreen2 {
     .content-border {
-        background: rgb(122, 202, 241);
-        background: linear-gradient(90deg, rgba(122, 202, 241, 1) 40%, rgba(0, 0, 0, 0) 100%);
-        border-radius: 20px 80px 80px 20px;
+      background: rgb(122, 202, 241);
+      background: linear-gradient(
+        180deg,
+        rgba(122, 202, 241, 1) 40%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      border-radius: 20px;
     }
+  }
 
-    @screen mdscreen2 {
-        .content-border {
-            background: rgb(122, 202, 241);
-            background: linear-gradient(180deg, rgba(122, 202, 241, 1) 40%, rgba(0, 0, 0, 0) 100%);
-            border-radius: 20px;
-        }
-    }
+  /* Common End  */
 
+  /* Header Start  */
+  .header-main {
+    @apply fixed top-0 left-0 w-full z-[99999];
+  }
 
-    /* Common End  */
+  .header-main .nav-menu {
+    @apply flex items-center gap-[18px] xlscreen:gap-10;
+  }
 
-    /* Header Start  */
-    .header-main {
-        @apply fixed top-0 left-0 w-full z-[99999];
-    }
+  .hoverable a {
+    @apply flex items-center gap-10;
+  }
 
-    .header-main .nav-menu {
-        @apply flex items-center gap-[18px] xlscreen:gap-10;
-    }
+  .header-right .btn-group {
+    @apply flex flex-wrap items-center gap-10 lgscreen:hidden;
+  }
 
-    .hoverable a {
-        @apply flex items-center gap-10;
-    }
+  .header-main .header-center .nav-menu li.active a,
+  .header-main .header-right li.active a {
+    @apply btn-active-skyBlue;
+  }
 
-    .header-right .btn-group {
-        @apply flex flex-wrap items-center gap-10 lgscreen:hidden;
-    }
+  .header-main .header-logo {
+    @apply xlscreen:w-[145px];
+  }
 
-    .header-main .header-center .nav-menu li.active a,
-    .header-main .header-right li.active a {
-        @apply btn-active-skyBlue;
-    }
+  .header-main .header-center {
+    @apply lgscreen:hidden;
+  }
 
-    .header-main .header-logo {
-        @apply xlscreen:w-[145px];
-    }
+  .nav-bar-icon {
+    @apply bg-lightBlue py-10 px-[14px] flex-col gap-y-[3px] rounded-100 hidden lgscreen:flex;
+  }
 
-    .header-main .header-center {
-        @apply lgscreen:hidden;
-    }
+  .nav-bar-icon span {
+    @apply h-[1px] w-20 bg-black block;
+  }
 
-    .nav-bar-icon {
-        @apply bg-lightBlue py-10 px-[14px] flex-col gap-y-[3px] rounded-100 hidden lgscreen:flex;
-    }
+  .nav-bar-icon span:last-of-type {
+    @apply w-10 relative ml-auto;
+  }
 
-    .nav-bar-icon span {
-        @apply h-[1px] w-20 bg-black block;
-    }
+  .mobile-nav-link {
+    @apply text-black;
+  }
 
-    .nav-bar-icon span:last-of-type {
-        @apply w-10 relative ml-auto;
-    }
+  /* Header End  */
 
-    .mobile-nav-link {
-        @apply text-black;
-    }
+  /* Intro Section Start  */
+  .intro .img {
+    @apply rounded-[16px];
+  }
 
-    /* Header End  */
+  .intro .content-wrapper {
+    border-radius: 20px 80px 80px 20px;
+  }
 
-    /* Intro Section Start  */
-    .intro .img {
-        @apply rounded-[16px];
-    }
-
+  @screen mdscreen2 {
     .intro .content-wrapper {
-        border-radius: 20px 80px 80px 20px;
+      border-radius: 20px;
     }
+  }
 
-    @screen mdscreen2 {
-        .intro .content-wrapper {
-            border-radius: 20px;
-        }
-    }
+  /* Intro Section End  */
+  /* / sub heading / */
+  .sub-heading {
+    @apply w-full inline-flex items-center justify-center;
+  }
 
-    /* Intro Section End  */
-    /* / sub heading / */
-    .sub-heading {
-        @apply w-full inline-flex items-center justify-center;
-    }
+  .sub-heading * {
+    @apply text-[24px] leading-[31px] font-semibold text-woodSmoke inline-block bg-lightBlue rounded-[100px] py-[8px] px-[32px] lgscreen:text-[18px] lgscreen:leading-[22px];
+  }
 
-    .sub-heading * {
-        @apply text-[24px] leading-[31px] font-semibold text-woodSmoke inline-block bg-lightBlue rounded-[100px] py-[8px] px-[32px] lgscreen:text-[18px] lgscreen:leading-[22px];
-    }
+  .title span {
+    @apply text-lightBlue;
+  }
 
-    .title span {
-        @apply text-lightBlue;
-    }
+  /* / sub heading / */
 
-    /* / sub heading / */
+  .img img {
+    @apply absolute inset-0 w-full h-full object-cover rounded-[8px];
+  }
 
-    .img img {
-        @apply absolute inset-0 w-full h-full object-cover rounded-[8px]
-    }
+  .team-block .img {
+    @apply pt-[118.79%] relative;
+  }
 
-    .team-block .img {
-        @apply pt-[118.79%] relative;
-    }
+  /* / team start / */
+  .hover-detail {
+    @apply absolute inset-0;
+  }
 
-    /* / team start / */
-    .hover-detail {
-        @apply absolute inset-0
-    }
+  .team-block:hover .hover-detail {
+    @apply opacity-100;
+  }
 
-    .team-block:hover .hover-detail {
-        @apply opacity-100;
-    }
+  .team-block .team-inner:hover .hover-detail::after {
+    @apply opacity-100 transition-all duration-300;
+  }
 
-    .team-block .team-inner:hover .hover-detail::after {
-        @apply opacity-100 transition-all duration-300;
-    }
+  .team-block .hover-detail::after {
+    @apply content-[''] absolute inset-0 bg-black/75 opacity-0 -z-[1] transition-all duration-300;
+  }
 
-    .team-block .hover-detail::after {
-        @apply content-[''] absolute inset-0 bg-black/75 opacity-0 -z-[1] transition-all duration-300;
-    }
+  .team-block-main .content * {
+    @apply text-[16px] leading-[20px] font-normal;
+  }
+  .team-block .team-inner .sub-logo {
+    @apply transition-common;
+  }
+  .team-block .team-inner:hover .sub-logo {
+    @apply opacity-0;
+  }
 
-    .team-block-main .content * {
-        @apply text-[16px] leading-[20px] font-normal;
-    }
+  /* / team end / */
 
-    /* / team end / */
+  /* / footer / */
+  .footer-copy .footer-left ul li {
+    @apply px-[12px] relative;
+  }
 
-    /* / footer / */
-    .footer-copy .footer-left ul li {
-        @apply px-[12px] relative;
-    }
+  .footer-copy .footer-left ul li:first-child::after {
+    @apply hidden;
+  }
 
-    .footer-copy .footer-left ul li:first-child::after {
-        @apply hidden;
-    }
+  .footer-copy .footer-left ul li::after {
+    @apply content-[''] absolute bg-nobel top-[4px] left-0 h-[12px] w-[1px];
+  }
 
-    .footer-copy .footer-left ul li::after {
-        @apply content-[''] absolute bg-nobel top-[4px] left-0 h-[12px] w-[1px];
-    }
+  .footer-copy .content * {
+    @apply text-[12px] leading-[15px];
+  }
 
-    .footer-copy .content * {
-        @apply text-[12px] leading-[15px];
-    }
+  .footer-right ul li a:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%)
+      hue-rotate(63deg) brightness(101%) contrast(101%);
+    -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+      saturate(7498%) hue-rotate(63deg) brightness(101%) contrast(101%);
+  }
 
-    .footer-right ul li a:hover {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%) hue-rotate(63deg) brightness(101%) contrast(101%);
-        -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%) hue-rotate(63deg) brightness(101%) contrast(101%);
-    }
+  .footer-contact ul li a:hover svg path {
+    fill: lightBlue;
+  }
 
-    .footer-contact ul li a:hover svg path {
-        fill: lightBlue;
-    }
+  .footer .footer-menu ul li a,
+  .footer .footer-contact ul li a svg,
+  .footer .footer-left ul li a {
+    @apply transition-common;
+  }
 
-    /* / footer / */
+  .scroll-img-1 {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+  .scroll-img-2 {
+    @apply absolute top-[120%] left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+  /* / footer / */
 }
 
 @layer utilities {
-    .container-fluid {
-        padding: 0 clamp(20px, 8vw, 110px);
-    }
+  .container-fluid {
+    padding: 0 clamp(20px, 8vw, 110px);
+  }
 
-    .transition-common {
-        @apply transition-all duration-300;
-    }
+  .transition-common {
+    @apply transition-all duration-300;
+  }
 
-    .filter-black {
-        filter: brightness(0) saturate(100%)
-    }
+  .filter-black {
+    filter: brightness(0) saturate(100%);
+  }
 }

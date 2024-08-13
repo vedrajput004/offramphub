@@ -165,7 +165,7 @@
         <section class="team-wrp py-100 lgscreen:py-40">
             <div class="container-fluid">
                 <div class="team-main">
-                    <div class="text-center">
+                    <div class="text-center anim_fadeinup">
                         <div class="sub-heading pb-5">
                             <span>Who we are</span>
                         </div>
@@ -179,10 +179,9 @@
                         </div>
                     </div>
                     <div
-                        class="team-block-main flex items-center sm:justify-center flex-wrap gap-y-[40px] -mx-[88px] pt-100 lgscreen:pt-[54px] desktop:-mx-20 lgscreen:-mx-20">
-                        <div
-                            class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] cursor-pointer desktop:px-20 lgscreen:px-20">
-                            <div class="relative team-inner">
+                        class="team-block-main flex items-center sm:justify-center flex-wrap gap-y-[40px] -mx-[88px] pt-100 lgscreen:pt-[54px] desktop:-mx-20 lgscreen:-mx-20 anim_fadeinup">
+                        <div class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                            <a href="javascript:void(0)" class="relative team-inner block">
                                 <div class="img rounded-[8px]">
                                     <img src="images/team-1.jpg" alt="Kushal Gandhi" width="282" height="335">
                                 </div>
@@ -217,12 +216,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
-                        <div
-                            class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] cursor-pointer desktop:px-20 lgscreen:px-20">
-                            <div class="relative team-inner">
+                        <div class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                            <a href="javascript:void(0)" class="relative team-inner block">
                                 <div class="img rounded-[8px]">
                                     <img src="images/team-1.jpg" alt="Kushal Gandhi" width="282" height="335">
                                 </div>
@@ -257,12 +255,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
-                        <div
-                            class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] cursor-pointer desktop:px-20 lgscreen:px-20">
-                            <div class="relative team-inner">
+                        <div class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                            <a href="javascript:void(0)" class="relative team-inner block">
                                 <div class="img rounded-[8px]">
                                     <img src="images/team-1.jpg" alt="Kushal Gandhi" width="282" height="335">
                                 </div>
@@ -297,7 +294,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -309,7 +306,7 @@
     <!-- footer -->
     <footer class="footer py-50 relative mdscreen:py-40">
         <div class="container-fluid">
-            <div class="footer-main">
+            <div class="footer-main anim_fadeinup">
                 <div class="text-center">
                     <a href="index.html" class="logo inline-block">
                         <img src="images/logo.png" alt="logo-image" width="208" height="23">
@@ -395,7 +392,10 @@
         </div>
         <a href="#"
             class="scroll-to-top bg-lightBlue w-[35px] h-[35px] rounded-[100px] absolute bottom-[30px] right-[30px] inline-flex items-center justify-center mdscreen:bottom-[16px] mdscreen:right-[16px]">
-            <img src="images/arrow-up.svg" alt="arrow-up">
+            <div class="relative h-full w-full overflow-hidden">
+                <img src="images/arrow-up.svg" alt="arrow-up" class="scroll-img-1">
+                <img src="images/arrow-up.svg" alt="arrow-up" class="scroll-img-2">
+            </div>
         </a>
     </footer>
     <!-- footer -->
