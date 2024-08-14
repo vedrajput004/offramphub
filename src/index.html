@@ -12,6 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap"
         rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>OffRampHub</title>
 </head>
 
@@ -89,27 +91,27 @@
                     <div class="overflow-hidden p-20">
                         <ul class="nav-menu-mobile flex flex-col justify-center items-center gap-15 text-center">
                             <li>
-                                <a href="javascript:void(0)" class="mobile-nav-link">
+                                <a href="javascript:void(0)" class="mobile-nav-link" data-menu-name="Home">
                                     Home
                                 </a>
                             </li>
                             <li class="hoverable">
-                                <a href="javascript:void(0)" class="mobile-nav-link">
+                                <a href="javascript:void(0)" class="mobile-nav-link" data-menu-name="Services">
                                     Services
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" class="mobile-nav-link">
+                                <a href="javascript:void(0)" class="mobile-nav-link" data-menu-name="Pricing">
                                     Pricing
                                 </a>
                             </li>
                             <li class="active">
-                                <a href="javascript:void(0)" class="mobile-nav-link">
+                                <a href="javascript:void(0)" class="mobile-nav-link" data-menu-name="About Us">
                                     About Us
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" class="mobile-nav-link">
+                                <a href="javascript:void(0)" class="mobile-nav-link" data-menu-name="Contact Us">
                                     Contact Us
                                 </a>
                             </li>
@@ -178,8 +180,9 @@
                                 risk</p>
                         </div>
                     </div>
-                    <div
-                        class="team-block-main flex items-center sm:justify-center flex-wrap gap-y-[40px] -mx-[88px] pt-100 lgscreen:pt-[54px] desktop:-mx-20 lgscreen:-mx-20 anim_fadeinup">
+                    <div id="team-block-main"
+                        class="team-block-main flex items-center sm:justify-center flex-wrap gap-y-[40px] -mx-[88px] pt-100 lgscreen:pt-[54px] desktop:-mx-20 lgscreen:-mx-20 mdscreen:hidden anim_fadeinup">
+
                         <div class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] desktop:px-20 lgscreen:px-20">
                             <a href="javascript:void(0)" class="relative team-inner block">
                                 <div class="img rounded-[8px]">
@@ -187,7 +190,7 @@
                                 </div>
                                 <div
                                     class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
-                                    <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                    <img src="images/sub-logo-img.png" alt="sub-logo" width="28" height="25">
                                 </div>
                                 <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
                                     <div class="hover-image">
@@ -222,7 +225,7 @@
                         <div class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] desktop:px-20 lgscreen:px-20">
                             <a href="javascript:void(0)" class="relative team-inner block">
                                 <div class="img rounded-[8px]">
-                                    <img src="images/team-1.jpg" alt="Kushal Gandhi" width="282" height="335">
+                                    <img src="images/team-2.jpg" alt="Cindy Rumbaugh" width="282" height="335">
                                 </div>
                                 <div
                                     class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
@@ -244,14 +247,14 @@
                                     </div>
                                     <div class="detail relative z-[9] mt-[65px]">
                                         <div class="title title-white">
-                                            <h3>Kushal Gandhi</h3>
-                                            <span class="pt-10 !text-white block">CEO, Founder</span>
+                                            <h3>Cindy Rumbaugh</h3>
+                                            <span class="pt-10 !text-white block">Product, Co-Founder</span>
                                         </div>
                                         <div class="content pt-20">
-                                            <p>Morgan Stanley, Discover, E&Y, Visa, First Republic Bank, JPMC</p>
+                                            <p>Bank of America, First Republic Bank, JPMC</p>
                                         </div>
                                         <div class="content pt-20">
-                                            <p>Northwestern, Mumbai University</p>
+                                            <p>San Diego State</p>
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +264,7 @@
                         <div class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] desktop:px-20 lgscreen:px-20">
                             <a href="javascript:void(0)" class="relative team-inner block">
                                 <div class="img rounded-[8px]">
-                                    <img src="images/team-1.jpg" alt="Kushal Gandhi" width="282" height="335">
+                                    <img src="images/team-3.jpg" alt="Rich Butts" width="282" height="335">
                                 </div>
                                 <div
                                     class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
@@ -283,18 +286,494 @@
                                     </div>
                                     <div class="detail relative z-[9] mt-[65px]">
                                         <div class="title title-white">
-                                            <h3>Kushal Gandhi</h3>
-                                            <span class="pt-10 !text-white block">CEO, Founder</span>
+                                            <h3>Rich Butts</h3>
+                                            <span class="pt-10 !text-white block">Sales & Service</span>
                                         </div>
                                         <div class="content pt-20">
-                                            <p>Morgan Stanley, Discover, E&Y, Visa, First Republic Bank, JPMC</p>
+                                            <p>Bank of Hawaii, First Republic Bank</p>
                                         </div>
                                         <div class="content pt-20">
-                                            <p>Northwestern, Mumbai University</p>
+                                            <p>U. of Hawaii, San Francisco State</p>
                                         </div>
                                     </div>
                                 </div>
                             </a>
+                        </div>
+
+                        <div class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                            <a href="javascript:void(0)" class="relative team-inner block">
+                                <div class="img rounded-[8px]">
+                                    <img src="images/team-4.jpg" alt="Nikhil Jha" width="282" height="335">
+                                </div>
+                                <div
+                                    class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                    <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                </div>
+                                <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                    <div class="hover-image">
+                                        <div class="logo-image relative z-[9]">
+                                            <svg class="hover-svg" width="100" height="100" viewBox="0 0 402 366"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="left-logo"
+                                                    d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                    fill="#7ACAF1" />
+                                                <path class="right-logo"
+                                                    d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                    fill="#9B9C9B" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="detail relative z-[9] mt-[65px]">
+                                        <div class="title title-white">
+                                            <h3>Nikhil Jha</h3>
+                                            <span class="pt-10 !text-white block">Technology, Co-Founder</span>
+                                        </div>
+                                        <div class="content pt-20">
+                                            <p>Persistent, First Republic Bank, JPMC</p>
+                                        </div>
+                                        <div class="content pt-20">
+                                            <p>IIITM Gwalior</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                            <a href="javascript:void(0)" class="relative team-inner block">
+                                <div class="img rounded-[8px]">
+                                    <img src="images/team-5.jpg" alt="Justin Gibson" width="282" height="335">
+                                </div>
+                                <div
+                                    class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                    <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                </div>
+                                <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                    <div class="hover-image">
+                                        <div class="logo-image relative z-[9]">
+                                            <svg class="hover-svg" width="100" height="100" viewBox="0 0 402 366"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="left-logo"
+                                                    d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                    fill="#7ACAF1" />
+                                                <path class="right-logo"
+                                                    d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                    fill="#9B9C9B" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="detail relative z-[9] mt-[65px]">
+                                        <div class="title title-white">
+                                            <h3>Justin Gibson</h3>
+                                            <span class="pt-10 !text-white block">Advisor</span>
+                                        </div>
+                                        <div class="content pt-20">
+                                            <p>PwC, KPMG, Greater Bay Bank, McKesson, First Republic Bank, JPMC</p>
+                                        </div>
+                                        <div class="content pt-20">
+                                            <p>University of California, Los Angeles</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                            <a href="javascript:void(0)" class="relative team-inner block">
+                                <div class="img rounded-[8px]">
+                                    <img src="images/team-6.jpg" alt="Karen Weissenbach" width="282" height="335">
+                                </div>
+                                <div
+                                    class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                    <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                </div>
+                                <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                    <div class="hover-image">
+                                        <div class="logo-image relative z-[9]">
+                                            <svg class="hover-svg" width="100" height="100" viewBox="0 0 402 366"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="left-logo"
+                                                    d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                    fill="#7ACAF1" />
+                                                <path class="right-logo"
+                                                    d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                    fill="#9B9C9B" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="detail relative z-[9] mt-[65px]">
+                                        <div class="title title-white">
+                                            <h3>Karen Weissenbach</h3>
+                                            <span class="pt-10 !text-white block">Advisor</span>
+                                        </div>
+                                        <div class="content pt-20">
+                                            <p>First Republic Bank, JPMC</p>
+                                        </div>
+                                        <div class="content pt-20">
+                                            <p>Penn State University</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="team-block lg:w-4/12 sm:w-6/12 w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                            <a href="javascript:void(0)" class="relative team-inner block">
+                                <div class="img rounded-[8px]">
+                                    <img src="images/team-7.jpg" alt="Tom Longstroth" width="282" height="335">
+                                </div>
+                                <div
+                                    class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                    <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                </div>
+                                <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                    <div class="hover-image">
+                                        <div class="logo-image relative z-[9]">
+                                            <svg class="hover-svg" width="100" height="100" viewBox="0 0 402 366"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="left-logo"
+                                                    d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                    fill="#7ACAF1" />
+                                                <path class="right-logo"
+                                                    d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                    fill="#9B9C9B" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="detail relative z-[9] mt-[65px]">
+                                        <div class="title title-white">
+                                            <h3>Tom Longstroth</h3>
+                                            <span class="pt-10 !text-white block">Advisor</span>
+                                        </div>
+                                        <div class="content pt-20">
+                                            <p>Zions, Wells Fargo Bank, PNC, Bank of the West, TD, First Republic Bank,
+                                                JPMC</p>
+                                        </div>
+                                        <div class="content pt-20">
+                                            <p>Wake Forest University, University of Utah</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="team-slider mt-50 md:hidden anim_fadeinup">
+                        <div class="swiper teamSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="team-block w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                                        <a href="javascript:void(0)" class="relative team-inner block">
+                                            <div class="img rounded-[8px]">
+                                                <img src="images/team-1.jpg" alt="Kushal Gandhi" width="282"
+                                                    height="335">
+                                            </div>
+                                            <div
+                                                class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                                <img src="images/sub-logo-img.png" alt="sub-logo" width="28"
+                                                    height="25">
+                                            </div>
+                                            <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                                <div class="hover-image">
+                                                    <div class="logo-image relative z-[9]">
+                                                        <svg class="hover-svg" width="100" height="100"
+                                                            viewBox="0 0 402 366" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path class="left-logo"
+                                                                d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                                fill="#7ACAF1" />
+                                                            <path class="right-logo"
+                                                                d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                                fill="#9B9C9B" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="detail relative z-[9] mt-[65px]">
+                                                    <div class="title title-white">
+                                                        <h3>Kushal Gandhi</h3>
+                                                        <span class="pt-10 !text-white block">CEO, Founder</span>
+                                                    </div>
+                                                    <div class="content pt-20 xlscreen:pt-10">
+                                                        <p>Morgan Stanley, Discover, E&Y, Visa, First Republic Bank,
+                                                            JPMC</p>
+                                                    </div>
+                                                    <div class="content pt-20 xlscreen:pt-10">
+                                                        <p>Northwestern, Mumbai University</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="team-block w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                                        <a href="javascript:void(0)" class="relative team-inner block">
+                                            <div class="img rounded-[8px]">
+                                                <img src="images/team-2.jpg" alt="Cindy Rumbaugh" width="282"
+                                                    height="335">
+                                            </div>
+                                            <div
+                                                class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                                <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                            </div>
+                                            <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                                <div class="hover-image">
+                                                    <div class="logo-image relative z-[9]">
+                                                        <svg class="hover-svg" width="100" height="100"
+                                                            viewBox="0 0 402 366" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path class="left-logo"
+                                                                d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                                fill="#7ACAF1" />
+                                                            <path class="right-logo"
+                                                                d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                                fill="#9B9C9B" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="detail relative z-[9] mt-[65px]">
+                                                    <div class="title title-white">
+                                                        <h3>Cindy Rumbaugh</h3>
+                                                        <span class="pt-10 !text-white block">Product, Co-Founder</span>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>Bank of America, First Republic Bank, JPMC</p>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>San Diego State</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="team-block w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                                        <a href="javascript:void(0)" class="relative team-inner block">
+                                            <div class="img rounded-[8px]">
+                                                <img src="images/team-3.jpg" alt="Rich Butts" width="282" height="335">
+                                            </div>
+                                            <div
+                                                class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                                <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                            </div>
+                                            <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                                <div class="hover-image">
+                                                    <div class="logo-image relative z-[9]">
+                                                        <svg class="hover-svg" width="100" height="100"
+                                                            viewBox="0 0 402 366" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path class="left-logo"
+                                                                d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                                fill="#7ACAF1" />
+                                                            <path class="right-logo"
+                                                                d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                                fill="#9B9C9B" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="detail relative z-[9] mt-[65px]">
+                                                    <div class="title title-white">
+                                                        <h3>Rich Butts</h3>
+                                                        <span class="pt-10 !text-white block">Sales & Service</span>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>Bank of Hawaii, First Republic Bank</p>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>U. of Hawaii, San Francisco State</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="team-block w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                                        <a href="javascript:void(0)" class="relative team-inner block">
+                                            <div class="img rounded-[8px]">
+                                                <img src="images/team-4.jpg" alt="Nikhil Jha" width="282" height="335">
+                                            </div>
+                                            <div
+                                                class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                                <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                            </div>
+                                            <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                                <div class="hover-image">
+                                                    <div class="logo-image relative z-[9]">
+                                                        <svg class="hover-svg" width="100" height="100"
+                                                            viewBox="0 0 402 366" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path class="left-logo"
+                                                                d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                                fill="#7ACAF1" />
+                                                            <path class="right-logo"
+                                                                d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                                fill="#9B9C9B" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="detail relative z-[9] mt-[65px]">
+                                                    <div class="title title-white">
+                                                        <h3>Nikhil Jha</h3>
+                                                        <span class="pt-10 !text-white block">Technology,
+                                                            Co-Founder</span>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>Persistent, First Republic Bank, JPMC</p>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>IIITM Gwalior</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="team-block w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                                        <a href="javascript:void(0)" class="relative team-inner block">
+                                            <div class="img rounded-[8px]">
+                                                <img src="images/team-5.jpg" alt="Justin Gibson" width="282"
+                                                    height="335">
+                                            </div>
+                                            <div
+                                                class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                                <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                            </div>
+                                            <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                                <div class="hover-image">
+                                                    <div class="logo-image relative z-[9]">
+                                                        <svg class="hover-svg" width="100" height="100"
+                                                            viewBox="0 0 402 366" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path class="left-logo"
+                                                                d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                                fill="#7ACAF1" />
+                                                            <path class="right-logo"
+                                                                d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                                fill="#9B9C9B" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="detail relative z-[9] mt-[65px]">
+                                                    <div class="title title-white">
+                                                        <h3>Justin Gibson</h3>
+                                                        <span class="pt-10 !text-white block">Advisor</span>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>PwC, KPMG, Greater Bay Bank, McKesson, First Republic Bank,
+                                                            JPMC</p>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>University of California, Los Angeles</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="team-block w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                                        <a href="javascript:void(0)" class="relative team-inner block">
+                                            <div class="img rounded-[8px]">
+                                                <img src="images/team-6.jpg" alt="Karen Weissenbach" width="282"
+                                                    height="335">
+                                            </div>
+                                            <div
+                                                class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                                <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                            </div>
+                                            <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                                <div class="hover-image">
+                                                    <div class="logo-image relative z-[9]">
+                                                        <svg class="hover-svg" width="100" height="100"
+                                                            viewBox="0 0 402 366" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path class="left-logo"
+                                                                d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                                fill="#7ACAF1" />
+                                                            <path class="right-logo"
+                                                                d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                                fill="#9B9C9B" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="detail relative z-[9] mt-[65px]">
+                                                    <div class="title title-white">
+                                                        <h3>Karen Weissenbach</h3>
+                                                        <span class="pt-10 !text-white block">Advisor</span>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>First Republic Bank, JPMC</p>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>Penn State University</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="team-block w-full px-[88px] desktop:px-20 lgscreen:px-20">
+                                        <a href="javascript:void(0)" class="relative team-inner block">
+                                            <div class="img rounded-[8px]">
+                                                <img src="images/team-7.jpg" alt="Tom Longstroth" width="282"
+                                                    height="335">
+                                            </div>
+                                            <div
+                                                class="sub-logo bg-white rounded-[8px] py-10 px-[8px] absolute top-[15px] right-[15px]">
+                                                <img src="images/sub-logo-img.png" alt="" width="28" height="25">
+                                            </div>
+                                            <div class="hover-detail py-25 px-20 z-[1] overflow-hidden">
+                                                <div class="hover-image">
+                                                    <div class="logo-image relative z-[9]">
+                                                        <svg class="hover-svg" width="100" height="100"
+                                                            viewBox="0 0 402 366" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path class="left-logo"
+                                                                d="M202.5 70H371.5L402 0H213.5C161 2.5 145 46.5 132 70L40 275H110L202.5 70Z"
+                                                                fill="#7ACAF1" />
+                                                            <path class="right-logo"
+                                                                d="M199.5 296H30.5L0 366H188.5C241 363.5 257 319.5 270 296L362 91H292L199.5 296Z"
+                                                                fill="#9B9C9B" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="detail relative z-[9] mt-[65px]">
+                                                    <div class="title title-white">
+                                                        <h3>Tom Longstroth</h3>
+                                                        <span class="pt-10 !text-white block">Advisor</span>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>Zions, Wells Fargo Bank, PNC, Bank of the West, TD, First
+                                                            Republic Bank,
+                                                            JPMC</p>
+                                                    </div>
+                                                    <div class="content pt-20">
+                                                        <p>Wake Forest University, University of Utah</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-btn-wrapper flex items-center flex-row-reverse gap-40 mt-50">
+                                <div class="swiper-button-next teamSwiper-next !h-[35px] !w-[35px] !relative">
+                                    <div
+                                        class="flex justify-center items-center h-full w-full bg-lightBlue rounded-[100px] rotate-90">
+                                        <img src="images/arrow-up.svg" alt="arrow-up" loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev teamSwiper-prev !h-[35px] !w-[35px] !relative">
+                                    <div
+                                        class="flex justify-center items-center h-full w-full bg-lightBlue rounded-[100px] -rotate-90">
+                                        <img src="images/arrow-up.svg" alt="arrow-up" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -406,6 +885,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
 </body>
 </body>

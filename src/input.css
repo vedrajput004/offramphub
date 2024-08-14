@@ -3,299 +3,344 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+    html {
+        scroll-behavior: smooth;
+    }
 
-  body {
-    @apply bg-black text-white font-dmSans;
-  }
+    body {
+        @apply bg-black text-white font-dmSans;
+    }
 
-  h1 {
-    font-size: clamp(28px, 5vw, 58px);
-  }
+    h1 {
+        font-size: clamp(28px, 5vw, 58px);
+    }
 
-  h2 {
-    @apply font-bold;
-    font-size: clamp(22px, 5vw, 32px);
-    line-height: clamp(24px, 5vw, 41px);
-  }
+    h2 {
+        @apply font-bold;
+        font-size: clamp(22px, 5vw, 32px);
+        line-height: clamp(24px, 5vw, 41px);
+    }
 
-  h3 {
-    @apply font-semibold;
-    font-size: clamp(18px, 5vw, 24px);
-    line-height: clamp(22px, 5vw, 31px);
-  }
+    h3 {
+        @apply font-semibold;
+        font-size: clamp(18px, 5vw, 24px);
+        line-height: clamp(22px, 5vw, 31px);
+    }
 
-  /* a {
+    /* a {
         @apply transition-all duration-300;
     } */
 
-  /* a:hover {
+    /* a:hover {
         @apply transition-all duration-300;
     } */
 
-  ul li {
-    @apply text-[12px] leading-[15px];
-  }
+    ul li {
+        @apply text-[12px] leading-[15px];
+    }
 }
 
 @layer components {
-  /* btn Start  */
-  .btn {
-    @apply py-5 px-15 text-12 rounded-100 relative overflow-hidden flex transition-common z-10;
-  }
 
-  .btn span {
-    @apply absolute block w-0 h-0 rounded-[50%] transition-all duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 -z-[1];
-  }
+    /* btn Start  */
+    .btn {
+        @apply py-5 px-15 text-12 rounded-100 relative overflow-hidden flex transition-common z-10;
+    }
 
-  .btn img {
-    @apply transition-all duration-500 ease-in-out;
-  }
+    .btn span {
+        @apply absolute block w-0 h-0 rounded-[50%] transition-all duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 -z-[1];
+    }
 
-  .btn:hover span {
-    @apply w-[225%] h-[562.5px];
-  }
+    .btn img {
+        @apply transition-all duration-500 ease-in-out;
+    }
 
-  .btn-skyBlue {
-    @apply text-white bg-transparent hover:text-black;
-  }
+    .btn:hover span {
+        @apply w-[225%] h-[562.5px];
+    }
 
-  .btn-skyBlue span {
-    @apply bg-lightBlue;
-  }
+    .btn-skyBlue {
+        @apply text-white bg-transparent hover:text-black;
+    }
 
-  .btn-skyBlue:hover img {
-    @apply filter-black;
-  }
+    .btn-skyBlue span {
+        @apply bg-lightBlue;
+    }
 
-  /* Active Btn start  */
-  .btn-active-skyBlue {
-    @apply bg-lightBlue text-black;
-  }
+    .btn-skyBlue:hover img {
+        @apply filter-black;
+    }
 
-  /* btn End  */
+    /* Active Btn start  */
+    .btn-active-skyBlue {
+        @apply bg-lightBlue text-black;
+    }
 
-  /* Common Start  */
-  .img {
-    @apply relative overflow-hidden;
-  }
+    /* btn End  */
 
-  .img img {
-    @apply absolute top-0 left-0 h-full w-full object-cover object-center;
-  }
+    /* Common Start  */
+    .img {
+        @apply relative overflow-hidden;
+    }
 
-  .pre-heading span {
-    font-size: clamp(12px, 5vw, 20px);
-    @apply font-normal block;
-  }
+    .img img {
+        @apply absolute top-0 left-0 h-full w-full object-cover object-center;
+    }
 
-  .white * {
-    @apply text-white;
-  }
+    .pre-heading span {
+        font-size: clamp(12px, 5vw, 20px);
+        @apply font-normal block;
+    }
 
-  .title span {
-    @apply text-lightBlue;
-  }
+    .white * {
+        @apply text-white;
+    }
 
-  .content p {
-    @apply text-16 text-nobel;
-  }
+    .title span {
+        @apply text-lightBlue;
+    }
 
-  .content-border {
-    background: rgb(122, 202, 241);
-    background: linear-gradient(
-      90deg,
-      rgba(122, 202, 241, 1) 40%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    border-radius: 20px 80px 80px 20px;
-  }
+    .content p {
+        @apply text-16 text-nobel;
+    }
 
-  @screen mdscreen2 {
     .content-border {
-      background: rgb(122, 202, 241);
-      background: linear-gradient(
-        180deg,
-        rgba(122, 202, 241, 1) 40%,
-        rgba(0, 0, 0, 0) 100%
-      );
-      border-radius: 20px;
+        background: rgb(122, 202, 241);
+        background: linear-gradient(90deg,
+                rgba(122, 202, 241, 1) 40%,
+                rgba(0, 0, 0, 0) 100%);
+        border-radius: 20px 80px 80px 20px;
     }
-  }
 
-  /* Common End  */
+    @screen mdscreen2 {
+        .content-border {
+            background: rgb(122, 202, 241);
+            background: linear-gradient(180deg,
+                    rgba(122, 202, 241, 1) 40%,
+                    rgba(0, 0, 0, 0) 100%);
+            border-radius: 20px;
+        }
+    }
 
-  /* Header Start  */
-  .header-main {
-    @apply fixed top-0 left-0 w-full z-[99999];
-  }
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+        @apply !hidden;
+    }
 
-  .header-main .nav-menu {
-    @apply flex items-center gap-[18px] xlscreen:gap-10;
-  }
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        @apply !hidden;
+    }
 
-  .hoverable a {
-    @apply flex items-center gap-10;
-  }
+    /* Common End  */
 
-  .header-right .btn-group {
-    @apply flex flex-wrap items-center gap-10 lgscreen:hidden;
-  }
+    /* Header Start  */
+    .header-main {
+        @apply fixed top-0 left-0 w-full z-[99999];
+    }
 
-  .header-main .header-center .nav-menu li.active a,
-  .header-main .header-right li.active a {
-    @apply btn-active-skyBlue;
-  }
+    .header-main .nav-menu {
+        @apply flex items-center gap-[18px] xlscreen:gap-10;
+    }
 
-  .header-main .header-logo {
-    @apply xlscreen:w-[145px];
-  }
+    .hoverable a {
+        @apply flex items-center gap-10;
+    }
 
-  .header-main .header-center {
-    @apply lgscreen:hidden;
-  }
+    .header-right .btn-group {
+        @apply flex flex-wrap items-center gap-10 lgscreen:hidden;
+    }
 
-  .nav-bar-icon {
-    @apply bg-lightBlue py-10 px-[14px] flex-col gap-y-[3px] rounded-100 hidden lgscreen:flex;
-  }
+    .header-main .header-center .nav-menu li.active a,
+    .header-main .header-right li.active a {
+        @apply btn-active-skyBlue;
+    }
 
-  .nav-bar-icon span {
-    @apply h-[1px] w-20 bg-black block;
-  }
+    .header-main .header-logo {
+        @apply xlscreen:w-[145px];
+    }
 
-  .nav-bar-icon span:last-of-type {
-    @apply w-10 relative ml-auto;
-  }
+    .header-main .header-center {
+        @apply lgscreen:hidden;
+    }
 
-  .mobile-nav-link {
-    @apply text-black;
-  }
+    .nav-bar-icon {
+        @apply bg-lightBlue py-10 px-[14px] flex-col gap-y-[3px] rounded-100 hidden lgscreen:flex;
+    }
 
-  /* Header End  */
+    .nav-bar-icon span {
+        @apply h-[1px] w-20 bg-black block;
+    }
 
-  /* Intro Section Start  */
-  .intro .img {
-    @apply rounded-[16px];
-  }
+    .nav-bar-icon span:last-of-type {
+        @apply w-10 relative ml-auto;
+    }
 
-  .intro .content-wrapper {
-    border-radius: 20px 80px 80px 20px;
-  }
+    .mobile-nav-link {
+        @apply text-black;
+    }
 
-  @screen mdscreen2 {
+    /* Header End  */
+
+    /* Intro Section Start  */
+    .intro .img {
+        @apply rounded-[16px];
+    }
+
     .intro .content-wrapper {
-      border-radius: 20px;
+        border-radius: 20px 80px 80px 20px;
     }
-  }
 
-  /* Intro Section End  */
-  /* / sub heading / */
-  .sub-heading {
-    @apply w-full inline-flex items-center justify-center;
-  }
+    @screen mdscreen2 {
+        .intro .content-wrapper {
+            border-radius: 20px;
+        }
+    }
 
-  .sub-heading * {
-    @apply text-[24px] leading-[31px] font-semibold text-woodSmoke inline-block bg-lightBlue rounded-[100px] py-[8px] px-[32px] lgscreen:text-[18px] lgscreen:leading-[22px];
-  }
+    /* Intro Section End  */
+    /* / sub heading / */
+    .sub-heading {
+        @apply w-full inline-flex items-center justify-center;
+    }
 
-  .title span {
-    @apply text-lightBlue;
-  }
+    .sub-heading * {
+        @apply text-[24px] leading-[31px] font-semibold text-woodSmoke inline-block bg-lightBlue rounded-[100px] py-[8px] px-[32px] lgscreen:text-[18px] lgscreen:leading-[22px];
+    }
 
-  /* / sub heading / */
+    .title span {
+        @apply text-lightBlue;
+    }
 
-  .img img {
-    @apply absolute inset-0 w-full h-full object-cover rounded-[8px];
-  }
+    /* / sub heading / */
 
-  .team-block .img {
-    @apply pt-[118.79%] relative;
-  }
+    .img img {
+        @apply absolute inset-0 w-full h-full object-cover rounded-[8px];
+    }
 
-  /* / team start / */
-  .hover-detail {
-    @apply absolute inset-0;
-  }
+    .team-block .img {
+        @apply pt-[118.79%] relative;
+    }
 
-  .team-block:hover .hover-detail {
-    @apply opacity-100;
-  }
+    /* / team start / */
+    .hover-detail {
+        @apply absolute inset-0;
+    }
 
-  .team-block .team-inner:hover .hover-detail::after {
-    @apply opacity-100 transition-all duration-300;
-  }
+    .team-block:hover .hover-detail {
+        @apply opacity-100;
+    }
 
-  .team-block .hover-detail::after {
-    @apply content-[''] absolute inset-0 bg-black/75 opacity-0 -z-[1] transition-all duration-300;
-  }
+    .team-block .team-inner:hover .hover-detail::after {
+        @apply opacity-100 transition-all duration-300;
+    }
 
-  .team-block-main .content * {
-    @apply text-[16px] leading-[20px] font-normal;
-  }
-  .team-block .team-inner .sub-logo {
-    @apply transition-common;
-  }
-  .team-block .team-inner:hover .sub-logo {
-    @apply opacity-0;
-  }
+    .team-block .hover-detail::after {
+        @apply content-[''] absolute inset-0 bg-black/75 opacity-0 -z-[1] transition-all duration-300;
+    }
 
-  /* / team end / */
+    .team-block-main .content * {
+        @apply text-[16px] leading-[20px] font-normal;
+    }
 
-  /* / footer / */
-  .footer-copy .footer-left ul li {
-    @apply px-[12px] relative;
-  }
+    .team-block .team-inner .sub-logo {
+        @apply transition-common;
+    }
 
-  .footer-copy .footer-left ul li:first-child::after {
-    @apply hidden;
-  }
+    .team-block .team-inner:hover .sub-logo {
+        @apply opacity-0;
+    }
 
-  .footer-copy .footer-left ul li::after {
-    @apply content-[''] absolute bg-nobel top-[4px] left-0 h-[12px] w-[1px];
-  }
+    /* / team end / */
 
-  .footer-copy .content * {
-    @apply text-[12px] leading-[15px];
-  }
+    /* / footer / */
+    .footer-copy .footer-left ul li {
+        @apply px-[12px] relative;
+    }
 
-  .footer-right ul li a:hover {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%)
-      hue-rotate(63deg) brightness(101%) contrast(101%);
-    -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
-      saturate(7498%) hue-rotate(63deg) brightness(101%) contrast(101%);
-  }
+    .footer-copy .footer-left ul li:first-child::after {
+        @apply hidden;
+    }
 
-  .footer-contact ul li a:hover svg path {
-    fill: lightBlue;
-  }
+    .footer-copy .footer-left ul li::after {
+        @apply content-[''] absolute bg-nobel top-[4px] left-0 h-[12px] w-[1px];
+    }
 
-  .footer .footer-menu ul li a,
-  .footer .footer-contact ul li a svg,
-  .footer .footer-left ul li a {
-    @apply transition-common;
-  }
+    .footer-copy .content * {
+        @apply text-[12px] leading-[15px];
+    }
 
-  .scroll-img-1 {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
-  }
-  .scroll-img-2 {
-    @apply absolute top-[120%] left-1/2 -translate-x-1/2 -translate-y-1/2;
-  }
-  /* / footer / */
+    .footer-right ul li a:hover {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%) hue-rotate(63deg) brightness(101%) contrast(101%);
+        -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7498%) hue-rotate(63deg) brightness(101%) contrast(101%);
+    }
+
+    .footer-contact ul li a:hover svg path {
+        fill: lightBlue;
+    }
+
+    .footer .footer-menu ul li a,
+    .footer .footer-contact ul li a svg,
+    .footer .footer-left ul li a {
+        @apply transition-common;
+    }
+
+    .scroll-img-1 {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+
+    .scroll-img-2 {
+        @apply absolute top-[120%] left-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+
+    /* / footer / */
 }
 
 @layer utilities {
-  .container-fluid {
-    padding: 0 clamp(20px, 8vw, 110px);
-  }
+    .container-fluid {
+        padding: 0 clamp(20px, 8vw, 110px);
+    }
 
-  .transition-common {
-    @apply transition-all duration-300;
-  }
+    .transition-common {
+        @apply transition-all duration-300;
+    }
 
-  .filter-black {
-    filter: brightness(0) saturate(100%);
-  }
+    .filter-black {
+        filter: brightness(0) saturate(100%);
+    }
+}
+
+
+/* Menu Hover Animation  */
+.nav-menu-mobile li {
+    overflow: hidden;
+}
+
+.nav-menu-mobile li a {
+    display: block;
+    position: relative;
+    -webkit-transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-menu-mobile li a:after {
+    content: attr(data-menu-name);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.nav-menu-mobile li a:hover {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
 }
